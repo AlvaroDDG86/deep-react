@@ -15,4 +15,5 @@ const Button = (props) => {
   );
 };
 
-export default Button;
+// this will not work, because function x() {} === function x() {} is false, they are not primitive values
+export default React.memo(Button);

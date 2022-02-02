@@ -1,3 +1,4 @@
+import React from 'react'
 import DemoParagraph from "./DemoParagraph"
 
 const DemoOutput = (props) => {
@@ -7,4 +8,5 @@ const DemoOutput = (props) => {
         </DemoParagraph>
 }
 
-export default DemoOutput
+// Only if the value of any prop change, the component will reevalate, it cots a lot
+export default React.memo(DemoOutput)
