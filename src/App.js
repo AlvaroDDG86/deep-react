@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import Button from './components/UI/Button/Button'
 import DemoOutput from './components/DemoOutput';
 
@@ -8,9 +8,10 @@ function App() {
   console.log('APP')
   const [showText, setShowText] = useState(false)
 
-  const clickButtonHandler = () => {
+  // save the value of the funcion, then it will be the same function
+  const clickButtonHandler = useCallback(() => {
     setShowText(prev => !prev)
-  }
+  }, [setShowText])
 
   return (
     <div className="app">

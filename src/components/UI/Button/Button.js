@@ -3,6 +3,7 @@ import React from 'react';
 import classes from './Button.module.css';
 
 const Button = (props) => {
+  console.log('Button')
   return (
     <button
       type={props.type || 'button'}
@@ -15,5 +16,5 @@ const Button = (props) => {
   );
 };
 
-// this will not work, because function x() {} === function x() {} is false, they are not primitive values
+// this will not work, because function x() {} === function x() {} is false, they are not primitive values (see now useCallback)
 export default React.memo(Button);
