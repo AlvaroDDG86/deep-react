@@ -11,7 +11,7 @@ function App() {
   // save the value of the funcion, then it will be the same function
   const clickButtonHandler = useCallback(() => {
     setShowText(prev => !prev)
-  }, [setShowText])
+  }, [])
 
   return (
     <div className="app">
